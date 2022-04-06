@@ -1,157 +1,64 @@
-<body>
-  
+<div class="container">
+  <!-- Button activador Modal Agregar Producto -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarProductoModal">
+    Agregar Producto
+  </button>
 
-    <div class="contenedorCards">
-      <div class="card">
-        <div class="wrapper">
-          <div class="colorProd"></div>
-          <div class="imgProd" style="background-image: url(../../../assets/mc.png);"></div>
-          <div class="infoProd">
-            <p class="nombreProd"></p>
-            <p class="extraInfo"></p>
-            <div class="actions">
-              <div class="preciosGrupo">
-                <p class="precio precioOferta"></p>
-                <p class="precio precioProd">McDonalds</p>
-              </div>
-              <div class="icono action aFavs">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <path d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z">
-                  </path>
-                </svg>
-              </div>
-              <div class="icono action alCarrito">
-                <svg class="inCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <title>Quitar del carrito</title>
-                  <path d="M30 22H12M2 6h6l10 40h32l3.2-9.7"></path>
-                  <circle cx="20" cy="54" r="4"></circle>
-                  <circle cx="46" cy="54" r="4"></circle>
-                  <circle cx="46" cy="22" r="16"></circle>
-                  <path d="M53 18l-8 9-5-5"></path>
-                </svg>
-                <svg class="outCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <title>Agregar al carrito</title>
-                  <path d="M2 6h10l10 40h32l8-24H16"></path>
-                  <circle cx="23" cy="54" r="4"></circle>
-                  <circle cx="49" cy="54" r="4"></circle>
-                </svg>
-              </div>
-            </div>
-          </div>
+  <div class="row">
+    <div class="col-12 col-md-4" *ngFor="let prod of empresasModelGet">
+      <div class="card border-success mb-3">
+        <div class="card-header bg-transparent border-success">{{ prod.nombre }}</div>
+        <div class="card-body text-success">
+          <p class="card-text">
+            La cantidad en stock es de: {{ prod.descripcion }}
+            y el precio del producto es de: Q.{{ prod.ubicacion }}
+          </p>
         </div>
-      </div>
-      <div class="card">
-        <div class="wrapper">
-          <div class="colorProd" style="background-color: #1d1d1d;"></div>
-          <div class="imgProd" style="background-image: url(../../../assets/campero.jpg);"></div>
-          <div class="infoProd">
-            <p class="nombreProd"></p>
-            <p class="extraInfo"></p>
-            <div class="actions">
-              <div class="preciosGrupo">
-                <p class="precio precioProd">Pollo Campero</p>
-              </div>
-              <div class="bakuretsu_icono action aFavs">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <path d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z">
-                  </path>
-                </svg>
-              </div>
-              <div class="bakuretsu_icono action alCarrito">
-                <svg class="inCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <title>Quitar del carrito</title>
-                  <path d="M30 22H12M2 6h6l10 40h32l3.2-9.7"></path>
-                  <circle cx="20" cy="54" r="4"></circle>
-                  <circle cx="46" cy="54" r="4"></circle>
-                  <circle cx="46" cy="22" r="16"></circle>
-                  <path d="M53 18l-8 9-5-5"></path>
-                </svg>
-                <svg class="outCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <title>Agregar al carrito</title>
-                  <path d="M2 6h10l10 40h32l8-24H16"></path>
-                  <circle cx="23" cy="54" r="4"></circle>
-                  <circle cx="49" cy="54" r="4"></circle>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="wrapper">
-          <div class="colorProd" style="background-color: #153a82;"></div>
-          <div class="imgProd" style="background-image: url(../../../assets/dom.jpg);"></div>
-          <div class="infoProd">
-            <p class="nombreProd"></p>
-            <p class="extraInfo"></p>
-            <div class="actions">
-              <div class="preciosGrupo">
-                <p class="precio precioOferta"></p>
-                <p class="precio precioProd">Dominos</p>
-              </div>
-              <div class="bakuretsu_icono action aFavs">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <path d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z">
-                  </path>
-                </svg>
-              </div>
-              <div class="bakuretsu_icono action alCarrito">
-                <svg class="inCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <title>Quitar del carrito</title>
-                  <path d="M30 22H12M2 6h6l10 40h32l3.2-9.7"></path>
-                  <circle cx="20" cy="54" r="4"></circle>
-                  <circle cx="46" cy="54" r="4"></circle>
-                  <circle cx="46" cy="22" r="16"></circle>
-                  <path d="M53 18l-8 9-5-5"></path>
-                </svg>
-                <svg class="outCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <title>Agregar al carrito</title>
-                  <path d="M2 6h10l10 40h32l8-24H16"></path>
-                  <circle cx="23" cy="54" r="4"></circle>
-                  <circle cx="49" cy="54" r="4"></circle>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="wrapper">
-          <div class="colorProd" style="background-color: #3f4a69;"></div>
-          <div class="imgProd" style="background-image: url(../../../assets/taco.jpg);"></div>
-          <div class="infoProd">
-            <p class="nombreProd"></p>
-            <p class="extraInfo"></p>
-            <div class="actions">
-              <div class="preciosGrupo">
-                <p class="precio precioOferta"></p>
-                <p class="precio precioProd">Taco Bell</p>
-              </div>
-              <div class="bakuretsu_icono action aFavs">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <path d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z">
-                  </path>
-                </svg>
-              </div>
-              <div class="bakuretsu_icono action alCarrito">
-                <svg class="inCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <title>Quitar del carrito</title>
-                  <path d="M30 22H12M2 6h6l10 40h32l3.2-9.7"></path>
-                  <circle cx="20" cy="54" r="4"></circle>
-                  <circle cx="46" cy="54" r="4"></circle>
-                  <circle cx="46" cy="22" r="16"></circle>
-                  <path d="M53 18l-8 9-5-5"></path>
-                </svg>
-                <svg class="outCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <title>Agregar al carrito</title>
-                  <path d="M2 6h10l10 40h32l8-24H16"></path>
-                  <circle cx="23" cy="54" r="4"></circle>
-                  <circle cx="49" cy="54" r="4"></circle>
-                </svg>
-              </div>
-            </div>
+        <div class="card-footer bg-transparent border-success">
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-danger" (click)="deleteEmpresa(prod._id)">Eliminar</button>
+            <button type="button" class="btn btn-warning">Editar</button>
           </div>
         </div>
       </div>
     </div>
-    </body>
+  </div>
+</div>
+
+
+
+
+<!-- Modal Agregar Producto -->
+<div class="modal fade" id="agregarProductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Empresa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mg-3">
+            <label for="inputNombre" class="form-label">Nombre Empresa</label>
+            <input type="text" id="inputNombre" class="form-control" name="nombre" #nombre="ngModel"
+            [(ngModel)]="empresasModelPost.nombre">
+          </div>
+          <div class="mg-3">
+            <label for="inputCantidad" class="form-label">Descripcion</label>
+            <input type="text" id="inputCantidad" class="form-control" name="cantidad" #cantidad="ngModel"
+            [(ngModel)]="empresasModelPost.descripcion">
+          </div>
+          <div class="mg-3">
+            <label for="inputPrecio" class="form-label">Ubicacion</label>
+            <input type="text" id="inputPrecio" class="form-control" name="precio" #precio="ngModel"
+            [(ngModel)]="empresasModelPost.ubicacion">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="postEmpresas()" >Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>

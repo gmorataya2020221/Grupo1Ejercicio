@@ -11,6 +11,8 @@ import { AgregarEmpresaComponent } from './components/agregar-empresa/agregar-em
 import { EmpresasComponent } from './components/empresas/empresas.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AggEmpresaComponent } from './components/agg-empresa/agg-empresa.component';
+import { FormsModule } from '@angular/forms';
+import { RegistroComponent } from './components/registro/registro.component';
 
 
 @NgModule({
@@ -23,12 +25,14 @@ import { AggEmpresaComponent } from './components/agg-empresa/agg-empresa.compon
     AgregarEmpresaComponent,
     EmpresasComponent,
     AggEmpresaComponent,
-   
+    RegistroComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

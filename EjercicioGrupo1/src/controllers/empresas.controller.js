@@ -25,7 +25,7 @@ function AgregarEmpresa(req, res) {
             return res.status(200).send({ empresa: empresaGuardada });
         });
     } else {
-        return res.send({ mensaje: "No cuentas con el permiso Admin para AGREGAR empresas" });
+        return res.status(400).send({ mensaje: "Debe enviar los parametros obligatorios."})
     }
 }
 
